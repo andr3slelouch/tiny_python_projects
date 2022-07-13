@@ -6,26 +6,26 @@ import argparse
 
 # --------------------------------------------------
 def get_args():
-    """Get command-line arguments"""
+    """Permite obtener los argumentos de la línea de comandos"""
 
     parser = argparse.ArgumentParser(
-        description="Crow's Nest -- choose the correct article",
+        description="Nido del cuervo -- Elige le artículo correcto",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('word', metavar='word', help='A word')
+    parser.add_argument('palabra', metavar='palabra', help='Una palabra')
 
     return parser.parse_args()
 
 
 # --------------------------------------------------
 def main():
-    """Make a jazz noise here"""
+    """Función principal"""
 
     args = get_args()
-    word = args.word
-    article = 'an' if word[0].lower() in 'aeiou' else 'a'
+    word = args.palabra
+    article = 'una' if word[-1].lower() in 'a' else 'un'
 
-    print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
+    print(f'¡Capitán, {article} {word} por la amura de babor!')
 
 
 # --------------------------------------------------

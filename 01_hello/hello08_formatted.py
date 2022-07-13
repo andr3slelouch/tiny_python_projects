@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Author:  Ken Youens-Clark <kyclark@gmail.com>
-Purpose: Say hello
+Autor:  Ken Youens-Clark <kyclark@gmail.com>
+Adaptado al español por: Luis Andrade <https://github.com/andr3slelouch>
+Propósito: Decir hola
 """
 
 import argparse
@@ -9,19 +10,20 @@ import argparse
 
 # --------------------------------------------------
 def get_args():
-    """Get the command-line arguments"""
+    """Permite obtener los argumentos de la línea de comandos"""
 
-    parser = argparse.ArgumentParser(description='Say hello')
-    parser.add_argument('-n', '--name', default='World', help='Name to greet')
+    parser = argparse.ArgumentParser(description='Decir hola')
+    parser.add_argument('-n', '--nombre', metavar='nombre',
+                        default='Mundo', help='Nombre a saludar')
     return parser.parse_args()
 
 
 # --------------------------------------------------
 def main():
-    """Make a jazz noise here"""
+    """Función principal"""
 
     args = get_args()
-    print('Hello, ' + args.name + '!')
+    print('Hola, ' + args.nombre + '!')
 
 
 # --------------------------------------------------

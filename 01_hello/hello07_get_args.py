@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-# Purpose: Say hello
+# Propósito: Decir hola
 
 import argparse
 
 def get_args():
-    parser = argparse.ArgumentParser(description='Say hello')
-    parser.add_argument('-n', '--name', metavar='name',
-                        default='World', help='Name to greet')
+    parser = argparse.ArgumentParser(description='Decir hola')
+    parser.add_argument('-n', '--nombre', metavar='nombre',
+                        default='Mundo', help='Nombre a saludar')
     return parser.parse_args()
 
 def main():
     args = get_args()
-    print('Hello, ' + args.name + '!')
+    print('Hola, ' + args.nombre + '!')
 
 if __name__ == '__main__':
     main()

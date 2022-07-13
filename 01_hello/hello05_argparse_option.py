@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Purpose: Say hello
+# Propósito: Decir hola
 
 import argparse
 
-parser = argparse.ArgumentParser(description='Say hello')
-parser.add_argument('-n', '--name', metavar='name',
-                    default='World', help='Name to greet')
+parser = argparse.ArgumentParser(description='Decir hola')
+parser.add_argument('-n', '--nombre', metavar='nombre',
+                    default='Mundo', help='Nombre a saludar')
 args = parser.parse_args()
-print('Hello, ' + args.name + '!')
+print('Hola, ' + args.nombre + '!')

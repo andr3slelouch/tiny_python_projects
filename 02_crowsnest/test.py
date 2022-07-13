@@ -4,27 +4,24 @@
 import os
 from subprocess import getstatusoutput, getoutput
 
-prg = './crowsnest.py'
+prg = './solution.py'
 consonant_words = [
-    'brigantine', 'clipper', 'dreadnought', 'frigate', 'galleon', 'haddock',
-    'junk', 'ketch', 'longboat', 'mullet', 'narwhal', 'porpoise', 'quay',
-    'regatta', 'submarine', 'tanker', 'vessel', 'whale', 'xebec', 'yatch',
-    'zebrafish'
+    'calamar', 'lenguado', 'pulpo', 'delfin', 'tiburón', 'pez', 'cangrejo'
 ]
-vowel_words = ['aviso', 'eel', 'iceberg', 'octopus', 'upbound']
-template = 'Ahoy, Captain, {} {} off the larboard bow!'
+vowel_words = ['tortuga', 'ballena', 'raya', 'almeja', 'pintarroja']
+template = '¡Capitán, {} {} por la amura de babor!'
 
 
 # --------------------------------------------------
-def test_exists():
-    """exists"""
+def test_existencia():
+    """Verifica si existe el script a probarse"""
 
     assert os.path.isfile(prg)
 
 
 # --------------------------------------------------
-def test_usage():
-    """usage"""
+def test_uso():
+    """Probará la utilización de argumentos"""
 
     for flag in ['-h', '--help']:
         rv, out = getstatusoutput(f'{prg} {flag}')
@@ -33,36 +30,36 @@ def test_usage():
 
 
 # --------------------------------------------------
-def test_consonant():
-    """brigantine -> a brigantine"""
+def test_masculino():
+    """pulpo -> un pulpo"""
 
     for word in consonant_words:
         out = getoutput(f'{prg} {word}')
-        assert out.strip() == template.format('a', word)
+        assert out.strip() == template.format('un', word)
 
 
 # --------------------------------------------------
-def test_consonant_upper():
-    """brigantine -> a Brigatine"""
+def test_masculino_mayuscula():
+    """Pulpo -> un Pulpo"""
 
     for word in consonant_words:
         out = getoutput(f'{prg} {word.title()}')
-        assert out.strip() == template.format('a', word.title())
+        assert out.strip() == template.format('un', word.title())
 
 
 # --------------------------------------------------
-def test_vowel():
-    """octopus -> an octopus"""
+def test_femenino():
+    """ballena -> una ballena"""
 
     for word in vowel_words:
         out = getoutput(f'{prg} {word}')
-        assert out.strip() == template.format('an', word)
+        assert out.strip() == template.format('una', word)
 
 
 # --------------------------------------------------
-def test_vowel_upper():
-    """octopus -> an Octopus"""
+def test_femenino_mayuscula():
+    """ballena -> una Ballena"""
 
     for word in vowel_words:
         out = getoutput(f'{prg} {word.upper()}')
-        assert out.strip() == template.format('an', word.upper())
+        assert out.strip() == template.format('una', word.upper())
