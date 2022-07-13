@@ -1,47 +1,48 @@
-# Chapter 1: Hello, World!
+# Chapter 1: Hola, Mundo! (Adaptado de Hello, World! )
 
-https://www.youtube.com/playlist?list=PLhOuww6rJJNP7UvTeF6_tQ1xcubAs9hvO
-
-Write a program to enthusiastically greet the world:
+Escriba un programa para saludar con entusiasmo al mundo:
 
 ```
 $ ./hello.py
-Hello, World!
+Hola, Mundo!
 ```
 
-The program should also accept a name given as an optional `--name` parameter:
+El programa también debería aceptar un nombre dado como un parámetro `--nombre` opcional:
 
 ```
-$ ./hello.py --name Universe
-Hello, Universe!
+$ ./hello.py --nombre Universe
+Hola, Universe!
 ```
 
-The program should produce documentation for `-h` or `--help`:
+El programa debe producir documentación para `-h` o `--help`:
 
 ```
 $ ./hello.py -h
-usage: hello.py [-h] [-n str]
+usage: hello.py [-h] [-n nombre]
 
-Say hello
+Decir hola
 
-optional arguments:
-  -h, --help          show this help message and exit
-  -n str, --name str  The name to greet (default: World)
+options:
+  -h, --help            show this help message and exit
+  -n nombre, --nombre nombre
+                        Nombre a saludar
+
 ```
 
-Run `pytest -xv test.py` (or `make test`) to ensure you pass all the tests:
+Ejecute `pytest -xv test.py` (o `make test`) para asegurarse de pasar todas las pruebas:
 
 ```
 $ make test
 pytest -xv test.py
-============================= test session starts ==============================
+============================= test session starts ======================================================================
 ...
-collected 4 items
+collected 5 items                                                                                                                            
 
-test.py::test_exists PASSED                                              [ 25%]
-test.py::test_usage PASSED                                               [ 50%]
-test.py::test_default PASSED                                             [ 75%]
-test.py::test_input PASSED                                               [100%]
+test.py::test_existencia PASSED                                                                                   [ 20%]
+test.py::test_corrida PASSED                                                                                      [ 40%]
+test.py::test_ejecutable PASSED                                                                                   [ 60%]
+test.py::test_uso PASSED                                                                                          [ 80%]
+test.py::test_entrada PASSED                                                                                      [100%]
 
-============================== 4 passed in 0.41s ===============================
+============================================================= 5 passed in 0.25s ========================================
 ```
