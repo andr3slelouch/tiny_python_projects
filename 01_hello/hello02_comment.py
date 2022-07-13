@@ -1,2 +1,2 @@
-# Purpose: Say hello
-print('Hello, World!')
+# Propósito: Decir hola
+print('Hola, Mundo!')
