@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""Picnic game"""
+"""Juego del Picnic"""
 
 import argparse
 
 
 # --------------------------------------------------
 def get_args():
-    """Get command-line arguments"""
+    """Obtener argumentos de línea de comandos"""
 
     parser = argparse.ArgumentParser(
-        description='Picnic game',
+        description='Juego del Picnic',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('item',
                         metavar='str',
                         nargs='+',
-                        help='Item(s) to bring')
+                        help='Objeto(s) a llevar')
 
-    parser.add_argument('-s',
-                        '--sorted',
+    parser.add_argument('-o',
+                        '--ordenar',
                         action='store_true',
-                        help='Sort the items')
+                        help='Ordenar los elementos')
 
     return parser.parse_args()
 
@@ -33,19 +33,19 @@ def main():
     items = args.item
     num = len(items)
 
-    if args.sorted:
+    if args.ordenar:
         items.sort()
 
     bringing = ''
     if num == 1:
         bringing = items[0]
     elif num == 2:
-        bringing = ' and '.join(items)
+        bringing = ' y '.join(items)
     else:
-        items[-1] = 'and ' + items[-1]
+        items[-1] = 'y ' + items[-1]
         bringing = ', '.join(items)
 
-    print('You are bringing {}.'.format(bringing))
+    print('Tú estas trayendo {}.'.format(bringing))
 
 
 # --------------------------------------------------

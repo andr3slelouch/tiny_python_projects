@@ -1,37 +1,35 @@
-# Picnic
+# Juego del Picnic
 
-https://www.youtube.com/playlist?list=PLhOuww6rJJNMuQohHrNxRjhFTR9UlUOIa
-
-Write a program that will correctly format the items we're taking on our picnic.
-For one item, it should print the one item:
+Escriba un programa que formatee correctamente los elementos que llevaremos a nuestro picnic.
+Para un elemento, debe imprimir el elemento único:
 
 ```
-$ ./picnic.py sandwiches
-You are bringing sandwiches.
+$ ./picnic.py sanduches
+Tú estas trayendo sanduches.
 ```
 
-For two items, place "and" in between:
+Para dos elementos, coloque "y" en el medio:
 
 ```
-$ ./picnic.py sandwiches chips
-You are bringing sandwiches and chips.
+$ ./picnic.py sanduches papas
+Tú estas trayendo sanduches y papas.
 ```
 
-For three or more items, use commas and "and":
+Para tres o más elementos, use comas y la letra "y":
 
 ```
-$ ./picnic.py sandwiches chips cake
-You are bringing sandwiches, chips, and cake.
+$ ./picnic.py sanduches papas pastel
+Tú estas trayendo sanduches, papas, y pastel.
 ```
 
-If the `--sorted` flag is present, the items should first be sorted:
+Si el indicador `--ordenar` está presente, primero se deben ordenar los elementos:
 
 ```
-$ ./picnic.py sandwiches chips cake --sorted
-You are bringing cake, chips, and sandwiches.
+$ ./picnic.py sanduches papas pastel --ordenar
+Tú estas trayendo papas, pastel, y sanduches.
 ```
 
-If no items are given, print a brief usage:
+Si no se dan artículos, imprima un breve uso:
 
 ```
 $ ./picnic.py
@@ -39,7 +37,7 @@ usage: picnic.py [-h] [-s] str [str ...]
 picnic.py: error: the following arguments are required: str
 ```
 
-Respond to `-h` and `--help` with a longer usage:
+Responde a `-h` y `--help` con un uso más largo:
 
 ```
 $ ./picnic.py -h
