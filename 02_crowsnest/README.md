@@ -4,7 +4,7 @@
 Escriba un programa que anuncie la aparición de algo "por la amura de babor" al capitán del barco.
 Tenga en cuenta que necesitará diferenciar el artículo masculino("un") y el femenino("una") antes de cada palabra
 
-```
+```bash
 $ ./crowsnest.py pulpo
 ¡Capitán, un pulpo por la amura de babor!
 ```
@@ -41,19 +41,19 @@ optional arguments:
 
 Un conjunto de pruebas aprobado se ve así:
 
-```
+```python
 $ make test
 pytest -xv test.py
 ============================= test session starts ==============================
 ...
 collected 6 items
 
-test.py::test_existencia PASSED                                              [ 16%]
-test.py::test_uso PASSED                                               [ 33%]
-test.py::test_masculino PASSED                                           [ 50%]
-test.py::test_masculino_mayuscula PASSED                                     [ 66%]
-test.py::test_femenino PASSED                                               [ 83%]
-test.py::test_femenino_mayuscula PASSED                                         [100%]
+test.py::test_existencia PASSED                                    [ 16%]
+test.py::test_uso PASSED                                           [ 33%]
+test.py::test_masculino PASSED                                     [ 50%]
+test.py::test_masculino_mayuscula PASSED                           [ 66%]
+test.py::test_femenino PASSED                                      [ 83%]
+test.py::test_femenino_mayuscula PASSED                            [100%]
 
 ============================== 6 passed in 2.89s ===============================
 ```

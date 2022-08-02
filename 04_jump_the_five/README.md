@@ -1,10 +1,9 @@
 # Jump the Five
 
-https://www.youtube.com/playlist?list=PLhOuww6rJJNNd1Mbu3h6SGfhD-8rRxLTp
 
-Write a program that will encode any number in a given string using an algorightm to "jump the five" on a standard US telephone keypad such that "1" becomes "9," "4" becomes "6," etc. 
-The "5" and the "0" will swap with each other.
-Here is the entire substitution table:
+Escriba un programa que codifique cualquier número en una cadena dada usando un algoritmo para "saltar el cinco" en un teclado telefónico estándar de EE. UU. de manera que "1" se convierta en "9", "4" se convierta en "6", etc.
+El "5" y el "0" se intercambiarán entre sí.
+Aquí está la tabla de sustitución completa:
 
 ```
 1 => 9
@@ -19,14 +18,14 @@ Here is the entire substitution table:
 0 => 5
 ```
 
-Encode only the numbers and leave all other text alone:
+Codifique solo los números y deje el resto del texto igual:
 
 ```
 $ ./jump.py 867-5309
 243-0751
 ```
 
-If given no arguments, present a brief usage:
+Si no se le dan argumentos, presente un breve uso:
 
 ```
 $ ./jump.py
@@ -34,7 +33,7 @@ usage: jump.py [-h] str
 jump.py: error: the following arguments are required: str
 ```
 
-Respond to `-h` or `--help` with a longer usage:
+Responda a `-h` o `--help` con un uso más largo:
 
 ```
 $ ./jump.py -h
@@ -49,8 +48,7 @@ optional arguments:
   -h, --help  show this help message and exit
 ```
 
-Run the test suite to ensure your program is working correctly:
-
+Ejecute el conjunto de pruebas para asegurarse de que su programa funcione correctamente:
 ```
 $ make test
 pytest -xv test.py

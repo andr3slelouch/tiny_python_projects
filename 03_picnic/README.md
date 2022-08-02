@@ -3,7 +3,7 @@
 Escriba un programa que formatee correctamente los elementos que llevaremos a nuestro picnic.
 Para un elemento, debe imprimir el elemento único:
 
-```
+```shell
 $ ./picnic.py sanduches
 Tú estas trayendo sanduches.
 ```
@@ -33,7 +33,7 @@ Si no se dan artículos, imprima un breve uso:
 
 ```
 $ ./picnic.py
-usage: picnic.py [-h] [-s] str [str ...]
+usage: picnic.py [-h] [-o] str [str ...]
 picnic.py: error: the following arguments are required: str
 ```
 
@@ -41,7 +41,7 @@ Responde a `-h` y `--help` con un uso más largo:
 
 ```
 $ ./picnic.py -h
-usage: picnic.py [-h] [-s] str [str ...]
+usage: picnic.py [-h] [-o] str [str ...]
 
 Picnic game
 
