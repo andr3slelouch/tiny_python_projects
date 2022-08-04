@@ -1,22 +1,20 @@
 # Howler
 
-https://www.youtube.com/playlist?list=PLhOuww6rJJNNzo5zqtx0388myQkUKyrQz
-
-Write a program that uppercases the given text:
+Escriba un programa que escriba en mayúsculas el texto dado:
 
 ```
-$ ./howler.py 'The quick brown fox jumps over the lazy dog.'
-THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+$ ./howler.py 'El veloz zorro marrón salta sobre el perro perezoso.'
+EL VELOZ ZORRO MARRÓN SALTA SOBRE EL PERRO PEREZOSO.
 ```
 
-If the text names a file, uppercase the contents of the file:
+Si el texto nombra un archivo, escriba en mayúsculas el contenido del archivo:
 
 ```
 $ ./howler.py ../inputs/fox.txt
-THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+EL VELOZ ZORRO MARRÓN SALTA SOBRE EL PERRO PEREZOSO.
 ```
 
-If given no arguments, print a brief usage:
+Si no se le dan argumentos, imprima un breve uso:
 
 ```
 $ ./howler.py
@@ -24,20 +22,20 @@ usage: howler.py [-h] [-o str] str
 howler.py: error: the following arguments are required: str
 ```
 
-If the `-o` or `--outfile` option is present, write the output to the given file and print nothing:
+Si la opción `-o` o `--outfile` está presente, escriba la salida en el archivo dado y no imprima nada:
 
 ```
 $ ./howler.py ../inputs/fox.txt -o out.txt
 ```
 
-There should now be an `out.txt` file with the contents:
+Ahora debería haber un archivo `out.txt` con el contenido:
 
 ```
 $ cat out.txt
-THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+EL VELOZ ZORRO MARRÓN SALTA SOBRE EL PERRO PEREZOSO.
 ```
 
-Respond to `-h` or `--help` with a longer usage:
+Responda a `-h` o `--help` con un uso más largo:
 
 ```
 $ ./howler.py -h
@@ -54,7 +52,7 @@ optional arguments:
                         Output filename (default: )
 ```
 
-Run the test suite to ensure your program is working correctly:
+Ejecute el conjunto de pruebas para asegurarse de que su programa funcione correctamente:
 
 ```
 $ make test
