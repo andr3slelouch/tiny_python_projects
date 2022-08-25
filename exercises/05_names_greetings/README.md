@@ -1,4 +1,4 @@
-# Programa de las pirámides
+# Programa de los nombres
 - Este programa saludará a los nombres ingresados por el usuario
 - En primer lugar dirá cuantos nombres el usuario envió
 - Luego procederá a saludar a cada nombre indicando la letra con la que inicia en minúscula y la letra con la que termina
